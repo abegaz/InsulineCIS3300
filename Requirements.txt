@@ -1,0 +1,45 @@
+Functional:
+
+1. 	Monitors blood sugar using a sensor program
+2. 	Responds to regularity by doing nothing; continually monitors for a 'crisis'.
+3. 	Have-custom made cartridges available for patient to use
+		A. Various sizes, depending on how much insulin a patient needs for a given set of time
+4. 	See how much insulin is needed to keep the patient healthy
+		A. Set a 'regular level' of insulin to be established
+		B. By default, follow this amount of insulin unless there's a problem
+		C. Allow certain parameters to be set--Like a maximum amount of insulin
+5. 	If the sensor picks up TOO LITTLE sugar:
+		A. Do nothing.
+		B. Make a tone-noise indicating the user needs sugar.
+6. 	If the sensor says that things are FINE
+		A. Do nothing.
+7. 	If the sensor picks up HIGH BLOOD SUGAR:
+		A. Insulin will be deliverered to the user
+8. 	The system will be adapting and responding to what it does based on the above.
+9. 	In case of problems
+		A. Display a message
+		B. These can include:
+			a. Insulin levels low ('Low' defined as less than a day's dose?)
+			b. Blood sugar level of user is low or too high 
+			c. If mobile/battery power: Display warning
+			d. If catheter comes out
+			e. Temperature too high
+10. 'LIFE ALERT': If user does not appear to be responding or shows troubling signs, contact emergency services.
+11. Upload data online, ala fitbit, OR to device itself (Specifics pending--What does the user want?)
+12. GUI needs to be implemented, giving user information in friendly and visually appealing/simple way.
+	A. Give automatic options 
+	B. Power
+	C. Show blood sugar
+	D. Readme
+13. Child-lock options
+	A. Primarily used for children and elderly people
+14. Different set of options depending on FAST-ACTING or SLOW-ACTING insulin
+	A. These are different types of insulin
+	B. They function differently.
+15. OPTIONAL FEATURE FOR USER: 'Regulating Tank' to keep insulin at room-temperature
+
+Non-Functional:
+1. Programming is done in Java and JavaFX
+2. Keep blood sugar in FINE zone, or:
+	a. user dies
+3. Use MySQL to store user information. 
