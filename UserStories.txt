@@ -1,7 +1,7 @@
 Functional Requirement User Stories
 1. As a patient I want the product to monitor my blood sugar using a sensor so that I can keep track of my glucose levels.
 2. As a patient I want the product to respond to regularity by doing nothing but continually moniter for a 'crisis' so that the product knows when to pump more insulin. 
-3. As a patient I want the product to have custom made available so that I am not given more insulin thaat is needed at the given time.
+3. As a patient I want the product to have custom made available so that I am not given more insulin that is needed at the given time.
 4.
 5.
 6.
@@ -9,11 +9,11 @@ Functional Requirement User Stories
 8.
 9. As a patient I want the product to display a message so that I am aware of what is going on with my glucose levels.
 10. As a patient I want the product to contact emergency services if I am unable to respond to warning messages so that my life will be saved.
-11.
+11. As a patient I want my data to have the option of being uploaded online so that I can access the information with ease and track it at any time.
 12.
-13.
+13. As a patient I want child-lock options for my insulin pump so that my children are not able to mess with it and harm themselves doing so.
 14.
-15.
+15. As a patient I want the product to regulate the temperature of the insulin so that it does not go bad due to too high or too low temperatures.
 Non-Functional:
 1. As an administrator, I want this project to be coded in Java and JavaFX, so my team can maintain it easily.
 2. As a user, I want this machine to maintain my blood sugar, or else I am in risk of death.
