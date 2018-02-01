@@ -1,14 +1,14 @@
 Functional Requirement User Stories
-1.
-2.
-3.
+1. As a patient I want the product to monitor my blood sugar using a sensor so that I can keep track of my glucose levels.
+2. As a patient I want the product to respond to regularity by doing nothing but continually moniter for a 'crisis' so that the product knows when to pump more insulin. 
+3. As a patient I want the product to have custom made available so that I am not given more insulin thaat is needed at the given time.
 4.
 5.
 6.
-7.
+7. As a patient if the sensor picks up high blood sugar I want the product to deliver the insulin to me so that I don't visit the hospital. 
 8.
-9.
-10.
+9. As a patient I want the product to display a message so that I am aware of what is going on with my glucose levels.
+10. As a patient I want the product to contact emergency services if I am unable to respond to warning messages so that my life will be saved.
 11.
 12.
 13.
