@@ -14,11 +14,7 @@ Functional Requirement User Stories
 13.
 14.
 15.
-16.
-17.
-18.
-19.
-20.
-21.
-22.
-24.
+Non-Functional:
+1. As an administrator, I want this project to be coded in Java and JavaFX, so my team can maintain it easily.
+2. As a user, I want this machine to maintain my blood sugar, or else I am in risk of death.
+3. As an administrator, I want this project's database to be coded in MySQL, because my team can maintain it easier.
