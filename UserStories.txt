@@ -14,7 +14,6 @@ Functional Requirement User Stories:
 13. As a patient, I want child-lock options for my insulin pump so that my children are not able to mess with it and harm themselves or myself doing so.
 14.As a patient, I want to be able to tell the pump if I have administered a certain amount of insulin to myself by other means than the pump so that the pump does not give me too much insulin.
 15. As a patient, I want the product to regulate the temperature of the insulin so that it does not go bad due to having too high or too low of a temperature.
-16. As a patient, I want the product to emit a unique and urgent klaxon if I fail to respond to emergency messages either for aide to emergency services or qualified persons in my vicinity.
 
 Non-Functional Requirement User Stories:
 1. As an administrator, I want this project to be coded in Java and JavaFX, so my team can maintain it easily.
