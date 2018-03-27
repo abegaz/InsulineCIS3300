@@ -1,19 +1,19 @@
 Functional Requirement User Stories:
+1. As a patient, I want to know how much insulin is needed, so that I can stay healthy.
+2. As a patient, I want to know when I have little sugar, so that I can go get more sugar for my body.
+3. As a patient, I want to know when my sugar is fine, so that I know my body is doing well.
+4. As a patient, if the sensor picks up high blood sugar, I want the product to deliver the insulin to me, so that I don't have to visit the hospital. 
+5. As a patient, I want the product to stop administering insulin if I remove the pump so that insulin is not wasted, and I am not over-medicated when I reattach the pump.
+6. As a patient, I want the product to display a message, so that I am aware of what is going on with my glucose levels.
+7. As a patient, I want the product to contact emergency services if I am unable to respond to warning messages so that my life will be saved.
+8. As a patient, I want my data to have the option of being uploaded online, so that I can access the information with ease and track it at any time.
+8. As a doctor, I want to be able to access my patient's insulin pump information, so that I can ensure his/her safety and instruct my patient on better use of the pump.
+9. As a patient, I want child-lock options for my insulin pump so that my children are not able to mess with it and harm themselves or myself doing so.
+10.As a patient, I want to be able to tell the pump if I have administered a certain amount of insulin to myself by other means than the pump so that the pump does not give me too much insulin.
+11. As a patient, I want the product to regulate the temperature of the insulin so that it does not go bad due to having too high or too low of a temperature.
+11. As a patient, I want the product to have a custom mode available, so that I am not given more insulin than what is needed at the given time
 1. As a patient, I want the product to monitor my blood sugar using a sensor so that I can keep track of my glucose levels.
-2. As a patient, I want the product to respond to regularity by doing nothing but continually monitor for a 'crisis' so that the product knows when to pump more insulin. 
-3. As a patient, I want the product to have a custom mode available, so that I am not given more insulin than what is needed at the given time.
-4. As a patient, I want to know how much insulin is needed, so that I can stay healthy.
-5. As a patient, I want to know when I have little sugar, so that I can go get more sugar for my body.
-6. As a patient, I want to know when my sugar is fine, so that I know my body is doing well.
-7. As a patient, if the sensor picks up high blood sugar, I want the product to deliver the insulin to me, so that I don't have to visit the hospital. 
-8. As a patient, I want the product to stop administering insulin if I remove the pump so that insulin is not wasted, and I am not over-medicated when I reattach the pump.
-9. As a patient, I want the product to display a message, so that I am aware of what is going on with my glucose levels.
-10. As a patient, I want the product to contact emergency services if I am unable to respond to warning messages so that my life will be saved.
-11. As a patient, I want my data to have the option of being uploaded online, so that I can access the information with ease and track it at any time.
-12. As a doctor, I want to be able to access my patient's insulin pump information, so that I can ensure his/her safety and instruct my patient on better use of the pump.
-13. As a patient, I want child-lock options for my insulin pump so that my children are not able to mess with it and harm themselves or myself doing so.
-14.As a patient, I want to be able to tell the pump if I have administered a certain amount of insulin to myself by other means than the pump so that the pump does not give me too much insulin.
-15. As a patient, I want the product to regulate the temperature of the insulin so that it does not go bad due to having too high or too low of a temperature.
+3. As a patient, I want the product to have a custom mode available, so that I am not given more insulin than what is needed at the given time
 
 Non-Functional Requirement User Stories:
 1. As an administrator, I want this project to be coded in Java and JavaFX, so my team can maintain it easily.
