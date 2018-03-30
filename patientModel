@@ -1,0 +1,44 @@
+package csis.cis3300.Model;
+
+public class Patient {
+	
+	
+	private int patientID;
+	private String FirstName;
+	private String LastName;
+	private String DiabeticType;
+	
+	
+	public Patient(int patientID) {
+		super();
+		this.patientID = patientID;
+	}
+	
+	
+	public int getPatientID() {
+		return patientID;
+	}
+	public void setPatientID(int patientID) {
+		this.patientID = patientID;
+	}
+	public String getFirstName() {
+		return FirstName;
+	}
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+	public String getLastName() {
+		return LastName;
+	}
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+	public String getDiabeticType() {
+		return DiabeticType;
+	}
+	public void setDiabeticType(String diabeticType) {
+		DiabeticType = diabeticType;
+	}
+	
+
+}
