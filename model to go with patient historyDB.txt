@@ -1,0 +1,37 @@
+package model;
+
+public class InsulinModel {
+	
+	private String PatientID, insulinID, TimeTaken;
+	private int AmountTaken;
+	public String getPatientID() {
+		return PatientID;
+	}
+	public void setPatientID(String patientID) {
+		PatientID = patientID;
+	}
+	public InsulinModel(String patientID) {
+		super();
+		PatientID = patientID;
+	}
+	public String getInsulinID() {
+		return insulinID;
+	}
+	public void setInsulinID(String insulinID) {
+		this.insulinID = insulinID;
+	}
+	public String getTimeTaken() {
+		return TimeTaken;
+	}
+	public void setTimeTaken(String timeTaken) {
+		TimeTaken = timeTaken;
+	}
+	public int getAmountTaken() {
+		return AmountTaken;
+	}
+	public void setAmountTaken(int amountTaken) {
+		AmountTaken = amountTaken;
+	}
+	
+
+}
