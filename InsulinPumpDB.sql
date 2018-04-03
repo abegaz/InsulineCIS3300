@@ -46,7 +46,9 @@ CREATE TABLE `emergencycontact` (
 CREATE TABLE `insulin` (
   `insulinID` int(11) NOT NULL,
   `InsulinType` varchar(20) NOT NULL,
-  `patientID` int(11) NOT NULL
+  `patientID` int(11) NOT NULL,
+  `BasalInsulin` int(11) NOT NULL,
+  `BolusInsulin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
