@@ -1,3 +1,4 @@
+//this is the controller
 package application;
 
 import javafx.event.ActionEvent;
@@ -17,3 +18,15 @@ public class SampleController {
 	}
 
 }
+
+//this is the view
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <Button fx:id="closebutton" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#onclick" prefHeight="32.0" prefWidth="52.0" text="Stop" textFill="#d94c4c" />
+   </children>
+</AnchorPane>
