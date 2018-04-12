@@ -1,0 +1,19 @@
+package application;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.stage.Stage;
+
+
+public class SampleController {
+	
+
+	@FXML private javafx.scene.control.Button closebutton;
+
+	@FXML
+	private void closebuttonAction(){
+	    Stage stage = (Stage) closebutton.getScene().getWindow();
+	    stage.close();
+	}
+
+}
