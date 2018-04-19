@@ -14,7 +14,7 @@ public class Sprint02Controller {
     @FXML private TableColumn columnBasalChange;
     @FXML private TableColumn<S, T> columnFoodChange;
     @FXML private TableColumn columnBolusChange;
-
+	//Simplest method if sounds do get incorperated; import javafx.scene.media.AudioClip; (https://stackoverflow.com/questions/10636194/java-fx-2-alert-sound)
 	public void touchRegister()
     {
 
