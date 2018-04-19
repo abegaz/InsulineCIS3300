@@ -1,7 +1,7 @@
 package edu.ung.cis.cis3000.Sprint01.controller;
 
 import javafx.scene.control.TableColumn;
-import application.InsulinPumpDBConfiguration;
+import application.dbconfig;
 
 public class Sprint02Controller {
 	//These instance variables are used to create new poll objects
