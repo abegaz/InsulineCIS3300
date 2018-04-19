@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2018 at 03:10 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Generation Time: Apr 17, 2018 at 05:08 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `patienthistory` (
   `PatientID` int(50) NOT NULL,
-  `InsulinID` int(50) NOT NULL,
-  `AmountTaken` int(50) NOT NULL,
-  `TimeTaken` int(11) NOT NULL
+  `BasalAmount` int(50) NOT NULL,
+  `FoodAmount` int(50) NOT NULL,
+  `BolusAmount` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -43,8 +43,7 @@ CREATE TABLE `patienthistory` (
 -- Indexes for table `patienthistory`
 --
 ALTER TABLE `patienthistory`
-  ADD PRIMARY KEY (`PatientID`),
-  ADD UNIQUE KEY `InsulinID` (`InsulinID`);
+  ADD PRIMARY KEY (`PatientID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
