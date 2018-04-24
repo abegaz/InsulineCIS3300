@@ -11,9 +11,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CIS3000InsulinPumpController">
    <children>
-      <TextField fx:id="txtState" layoutX="400.0" layoutY="287.0" prefHeight="39.0" prefWidth="172.0" promptText="Basal Amount" />
       <TextField fx:id="txtBolusAmount" layoutX="31.0" layoutY="287.0" prefHeight="39.0" prefWidth="172.0" promptText="Bolus Amount" />
       <TextField fx:id="txtFoodAmount" layoutX="216.0" layoutY="287.0" prefHeight="39.0" prefWidth="172.0" promptText="Food Amount" />
+      <TextField fx:id="txtBasalAmount" layoutX="400.0" layoutY="287.0" prefHeight="39.0" prefWidth="172.0" promptText="Basal Amount" />
+      <TextField fx:id="txtPatientId" layoutX="31.0" layoutY="352.0" prefHeight="39.0" prefWidth="172.0" promptText="Patient ID" />
       <Button layoutX="244.0" layoutY="352.0" mnemonicParsing="false" onAction="#touchRegister" prefHeight="39.0" prefWidth="109.0" text="Register">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -31,6 +32,5 @@
             <TableColumn fx:id="tcBasalAmount" prefWidth="178.0" text="Basal Amount" />
         </columns>
       </TableView>
-      <TextField fx:id="txtPatientId" layoutX="31.0" layoutY="352.0" prefHeight="39.0" prefWidth="172.0" promptText="Patient ID" />
    </children>
 </AnchorPane>
