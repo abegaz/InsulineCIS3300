@@ -14,7 +14,9 @@ public class CIS3000InsulinPumpModel {
 	Connection myConn = null;
 	Statement myStmt = null;
 	ResultSet myRs = null;
-	private int bsValue;
+	private String tcBolusAmount;
+	private String tcFoodAmount;
+	private String tcBasalAmount;
 
 	private String bolusAmount;
 	private String foodAmount;
@@ -86,5 +88,113 @@ public class CIS3000InsulinPumpModel {
 					}
 		}
 	 }
+
+	 //--tcBolusAmount---------------------------------------------------------------------------------------------
+	 public String getTcBolusAmountFromDB() throws SQLException{
+		  try {
+		   myConn = DriverManager.getConnection(url, user , password);
+		   myStmt = myConn.createStatement();
+		   myRs = myStmt.executeQuery("SELECT * FROM bloodsugar WHERE id IN (SELECT MAX(id) FROM bloodsugar)");
+		   while (myRs.next()) {
+			   tcBolusAmount = myRs.getString("bolusAmount");
+		   }
+		  }
+		  catch (Exception exc) {
+		   exc.printStackTrace();
+		  }
+		  finally {
+		   if (myRs != null) {
+		    myRs.close();
+		   }
+
+		   if (myStmt != null) {
+		    myStmt.close();
+		   }
+
+		   if (myConn != null) {
+		    myConn.close();
+		   }
+
+		  }
+		  return tcBolusAmount;
+		 }
+
+
+	 public String getTcBolusAmount() {
+		return tcBolusAmount;
+	 }
+	 //end tcBolusAmount-------------------------------------------------------------------------------------------------
+
+	 //--tcFoodAmount------------------------------------------------------------------------------------------------------------------
+	 public String getTcFoodAmountFromDB() throws SQLException{
+		  try {
+		   myConn = DriverManager.getConnection(url, user , password);
+		   myStmt = myConn.createStatement();
+		   myRs = myStmt.executeQuery("SELECT * FROM bloodsugar ORDER BY id DESC LIMIT 1,1");
+		   while (myRs.next()) {
+		   // System.out.println(myRs.getString("bloodSugar") + "  " + myRs.getString("time"));
+		    tcFoodAmount = myRs.getString("bloodSugar");
+		   }
+		  }
+		  catch (Exception exc) {
+		   exc.printStackTrace();
+		  }
+		  finally {
+		   if (myRs != null) {
+		    myRs.close();
+		   }
+
+		   if (myStmt != null) {
+		    myStmt.close();
+		   }
+
+		   if (myConn != null) {
+		    myConn.close();
+		   }
+		  }
+		  return tcFoodAmount;
+		 }
+
+
+	public String getTcFoodAmount() {
+		return tcFoodAmount;
+	 }
+	//end tcFoodAmount-------------------------------------------------------------------------------------------------------------------
+
+	//tcBasalAmount----------------------------------------------------------------------------------------------------------------------
+	public String getTcBasalAmountFromDB() throws SQLException{
+		  try {
+		   myConn = DriverManager.getConnection(url, user , password);
+		   myStmt = myConn.createStatement();
+		   myRs = myStmt.executeQuery("SELECT * FROM bloodsugar ORDER BY id DESC LIMIT 1,2");
+		   while (myRs.next()) {
+		   // System.out.println(myRs.getString("bloodSugar") + "  " + myRs.getString("time"));
+		    tcBasalAmount = myRs.getString("bloodSugar");
+		   }
+		  }
+		  catch (Exception exc) {
+		   exc.printStackTrace();
+		  }
+		  finally {
+		   if (myRs != null) {
+		    myRs.close();
+		   }
+
+		   if (myStmt != null) {
+		    myStmt.close();
+		   }
+
+		   if (myConn != null) {
+		    myConn.close();
+		   }
+		  }
+			return tcBasalAmount;
+		 }
+
+
+	public String getTcBasalAmount() {
+		return tcBasalAmount;
+	}
+	//end tcBasalAmount------------------------------------------------------------------------------------------------------------------
 
 }
