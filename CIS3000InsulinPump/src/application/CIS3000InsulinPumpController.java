@@ -15,18 +15,20 @@ public class CIS3000InsulinPumpController {
     @FXML private TextField txtBolusAmount;
     @FXML private TextField txtFoodAmount;
     @FXML private TextField txtBasalAmount;
+    @FXML private TextField txtpatientId;
 
 	public void touchRegister()
     {
 
         CIS3000InsulinPumpModel c3ipm = new CIS3000InsulinPumpModel(txtBolusAmount.getText(),
                                       txtFoodAmount.getText(),
-                                      txtBasalAmount.getText());
+                                      txtBasalAmount.getText(),
+                                      txtPatientId.getText());
 
         System.out.println(c3ipm.toString());
 
-        String query = "insert into poll " + "(bolusAmount, foodAmount, basalAmount)"
-				+ "values(?,?,?)";
+        String query = "insert into bloodsugar " + "(bolusAmount, foodAmount, basalAmount, patientId)"
+				+ "values(?,?,?,?)";
 
 		try (Connection conn = DatabaseConfig.getConnection();
 				PreparedStatement insertc3ipm = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);) {
@@ -34,6 +36,7 @@ public class CIS3000InsulinPumpController {
 			insertc3ipm.setString(1, c3ipm.getBolusAmount());
 			insertc3ipm.setString(2, c3ipm.getFoodAmount());
 			insertc3ipm.setString(3, c3ipm.getBasalAmount());
+			insertc3ipm.setString(4, c3ipm.getPatientId());
 			// get the number of return rows
 			int affectedRow = insertc3ipm.executeUpdate();
 
@@ -42,6 +45,7 @@ public class CIS3000InsulinPumpController {
 				txtBolusAmount.setText("");
 				txtFoodAmount.setText("");
 				txtBasalAmount.setText("");
+				txtPatientId.setText("");
 			}
 
 		} catch (Exception e) {
