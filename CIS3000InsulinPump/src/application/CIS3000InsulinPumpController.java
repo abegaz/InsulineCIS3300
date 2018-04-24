@@ -13,22 +13,21 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 public class CIS3000InsulinPumpController {
-	//These instance variables are used to create new poll objects
     @FXML private TextField txtBolusAmount;
     @FXML private TextField txtFoodAmount;
     @FXML private TextField txtBasalAmount;
     @FXML private TextField txtPatientId;
-    
+
     private int index = 0;
 
 	public void touchRegister()
     {
 		//creates dNow date and time String
 	    Date dNow = new Date( );
-	    SimpleDateFormat ft = 
+	    SimpleDateFormat ft =
 	    new SimpleDateFormat ("hh:mm:ss a");
 	    //---------------------------------
-	    
+
 
 	    //from EasyPoll
         CIS3000InsulinPumpModel c3ipm = new CIS3000InsulinPumpModel(txtBolusAmount.getText(),
@@ -38,7 +37,7 @@ public class CIS3000InsulinPumpController {
 
         System.out.println(c3ipm.toString());
 
-        String query = "insert into poll " + "(bolusAmount, foodAmount, basalAmount, patientId)"
+        String query = "insert into bloodsugar " + "(bolusAmount, foodAmount, basalAmount, patientId)"
 				+ "values(?,?,?,?)";
 
 		try (Connection conn = DatabaseConfig.getConnection();
