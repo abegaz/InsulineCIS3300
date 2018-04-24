@@ -10,6 +10,8 @@ import application.CIS3000InsulinPumpModel;
 import application.DatabaseConfig;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class CIS3000InsulinPumpController {
@@ -17,7 +19,13 @@ public class CIS3000InsulinPumpController {
     @FXML private TextField txtFoodAmount;
     @FXML private TextField txtBasalAmount;
     @FXML private TextField txtPatientId;
+    @FXML private TableView tvPatientData;
+    @FXML private TableColumn tcBolusAmount;
+    @FXML private TableColumn tcFoodAmount;
+    @FXML private TableColumn tcBasalAmount;
 
+
+    private CIS3000InsulinPumpModel model;
     private int index = 0;
 
 	public void touchRegister()
@@ -29,7 +37,7 @@ public class CIS3000InsulinPumpController {
 	    //---------------------------------
 
 
-	    //from EasyPoll
+	    //-- inputs data into database
         CIS3000InsulinPumpModel c3ipm = new CIS3000InsulinPumpModel(txtBolusAmount.getText(),
                                       txtFoodAmount.getText(),
                                       txtBasalAmount.getText(),
@@ -58,11 +66,31 @@ public class CIS3000InsulinPumpController {
 				txtPatientId.setText("");
 			}
 
+			//end input data to database-----------------------------------------------------------------------------------------------
+			//-- retrieve data for table
+			//System.out.println("test println");
+
+
+
+			//end retrieve data for table-----------------------------------------------------------------------------------------------
+
+
+
+
 		} catch (Exception e) {
 			System.out.println("Status: operation failed due to "+e);
 
 		}
-		//end EasyPoll example-----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 		}
 }
