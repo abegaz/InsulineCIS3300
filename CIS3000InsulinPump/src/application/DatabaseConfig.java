@@ -9,7 +9,7 @@ package application;
 
 		private static final String USERNAME = "root";
 		private static final String PASSWORD = "";
-		private static final String CONN_STRING = "jdbc:mysql://localhost/easypoll";
+		private static final String CONN_STRING = "jdbc:mysql://localhost/cis3000insulinpump_db";
 
 		// connection  method that connects us to the MySQL database
 		public static Connection getConnection() throws SQLException{
