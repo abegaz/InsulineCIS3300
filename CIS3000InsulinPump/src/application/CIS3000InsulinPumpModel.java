@@ -4,22 +4,23 @@ public class CIS3000InsulinPumpModel {
 	private String bolusAmount;
 	private String foodAmount;
 	private String basalAmount;
-	private int patientId;
-	public int getpatientId() {
+	private String patientId;
+	public String getPatientId() {
 		return patientId;
 	}
-	public void setpatientId(int patientId) {
+	public void setPatientId(String patientId) {
 		this.patientId = patientId;
 	}
-	public CIS3000InsulinPumpModel(int patientId) {
+	public CIS3000InsulinPumpModel(String patientId) {
 		super();
 		this.patientId = patientId;
 	}
-	public CIS3000InsulinPumpModel(String bolusAmount, String foodAmount, String basalAmount) {
+	public CIS3000InsulinPumpModel(String bolusAmount, String foodAmount, String basalAmount, String patientId) {
 		super();
 		this.bolusAmount = bolusAmount;
 		this.foodAmount = foodAmount;
 		this.basalAmount = basalAmount;
+		this.patientId = patientId;
 	}
 	public String getBolusAmount() {
 		return bolusAmount;
