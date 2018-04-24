@@ -61,8 +61,8 @@ public class CIS3000InsulinPumpModel {
 		 try {
 				myConn = DriverManager.getConnection(url, user, password);
 				myStmt = myConn.createStatement();
-				String sql = "insert into bloodsugar " + " (bolusAmount)"
-						+ " values ('"+bsValue+"')";
+				String sql = "insert into bloodsugar " + " (bolusAmount,foodAmount,basalAmount,patientId)"
+						+ " values (?,?,?,?)";
 				myStmt.executeUpdate(sql);
 				System.out.println("Insert complete.");
 				} catch (Exception exc) {
@@ -86,5 +86,5 @@ public class CIS3000InsulinPumpModel {
 					}
 		}
 	 }
-	
+
 }
