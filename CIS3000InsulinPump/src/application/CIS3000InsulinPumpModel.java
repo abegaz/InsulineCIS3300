@@ -1,6 +1,21 @@
 package application;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class CIS3000InsulinPumpModel {
+	String url = "jdbc:mysql://localhost:3306/cis3000insulinpump_db";
+	String user = "root";
+	String password = "";
+
+	Connection myConn = null;
+	Statement myStmt = null;
+	ResultSet myRs = null;
+	private int bsValue;
+
 	private String bolusAmount;
 	private String foodAmount;
 	private String basalAmount;
@@ -41,4 +56,35 @@ public class CIS3000InsulinPumpModel {
 		this.basalAmount = basalAmount;
 	}
 
+	 public void uploadBSToDB()
+	 {
+		 try {
+				myConn = DriverManager.getConnection(url, user, password);
+				myStmt = myConn.createStatement();
+				String sql = "insert into bloodsugar " + " (bolusAmount)"
+						+ " values ('"+bsValue+"')";
+				myStmt.executeUpdate(sql);
+				System.out.println("Insert complete.");
+				} catch (Exception exc) {
+					exc.printStackTrace();
+				} finally {
+					if (myStmt != null) {
+						try {
+							myStmt.close();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					if (myConn != null) {
+						try {
+							myConn.close();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+		}
+	 }
+	
 }
